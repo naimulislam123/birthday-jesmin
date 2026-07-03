@@ -5,133 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday Jesmin!</title>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #fff0f5;
-            overflow-x: hidden;
-            min-height: 100vh;
-        }
-
-        /* 1. Loading Screen */
-        #loader {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(135deg, #ffe4e1, #ffb6c1);
-            display: flex; flex-direction: column; justify-content: center; align-items: center;
-            z-index: 9999;
-        }
-        .spinner {
-            width: 50px; height: 50px;
-            border: 5px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            border-top-color: #ff69b4;
-            animation: spin 1s linear infinite;
-        }
-        .loader-text {
-            margin-top: 20px; font-size: 1.1rem; color: #ff1493; font-weight: 600;
-            animation: pulse 1s infinite alternate;
-        }
-
+        body { font-family: 'Poppins', sans-serif; background-color: #fff0f5; overflow-x: hidden; min-height: 100vh; }
+        #loader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #ffe4e1, #ffb6c1); display: flex; flex-direction: column; justify-content: center; align-items: center; z-index: 9999; }
+        .spinner { width: 50px; height: 50px; border: 5px solid rgba(255, 255, 255, 0.3); border-radius: 50%; border-top-color: #ff69b4; animation: spin 1s linear infinite; }
+        .loader-text { margin-top: 20px; font-size: 1.1rem; color: #ff1493; font-weight: 600; animation: pulse 1s infinite alternate; }
         @keyframes spin { to { transform: rotate(360deg); } }
         @keyframes pulse { from { opacity: 0.5; } to { opacity: 1; } }
-
-        /* 2. Main Content */
-        #main-content {
-            display: none;
-            text-align: center;
-            padding: 40px 20px;
-            background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
-            min-height: 100vh;
-        }
-        .header-title {
-            font-family: 'Dancing Script', cursive;
-            font-size: 3rem; color: #ff1493; margin-bottom: 10px;
-        }
-
-        /* Photo Frame */
-        .photo-container {
-            display: inline-block; margin: 20px auto; padding: 10px;
-            background: white; border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(255, 105, 180, 0.3);
-            animation: float 3s ease-in-out infinite;
-        }
-        .photo-container img {
-            width: 260px; height: 260px; object-fit: cover; border-radius: 15px; display: block;
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
-        }
-
-        /* Card Message */
-        .card-message {
-            max-width: 450px; margin: 20px auto; background: rgba(255, 255, 255, 0.9);
-            padding: 25px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
+        #main-content { display: none; text-align: center; padding: 40px 20px; background: linear-gradient(to bottom, #fff0f5, #ffe4e1); min-height: 100vh; }
+        .header-title { font-family: 'Dancing Script', cursive; font-size: 3rem; color: #ff1493; margin-bottom: 10px; }
+        .photo-container { display: inline-block; margin: 20px auto; padding: 10px; background: white; border-radius: 20px; box-shadow: 0 10px 25px rgba(255, 105, 180, 0.3); animation: float 3s ease-in-out infinite; }
+        .photo-container img { width: 260px; height: 260px; object-fit: cover; border-radius: 15px; display: block; }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+        .card-message { max-width: 450px; margin: 20px auto; background: rgba(255, 255, 255, 0.9); padding: 25px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
         .wish-text { font-size: 1rem; line-height: 1.7; color: #4a4a4a; margin-bottom: 15px; }
         .from-text { font-family: 'Dancing Script', cursive; font-size: 1.8rem; color: #ff1493; }
-
-        /* Falling Hearts/Roses */
-        .falling-element {
-            position: fixed; top: -50px; pointer-events: none; z-index: 999;
-            animation: fall linear infinite;
-        }
-        @keyframes fall {
-            0% { top: -50px; transform: translateX(0) rotate(0deg); opacity: 1; }
-            100% { top: 105vh; transform: translateX(50px) rotate(360deg); opacity: 0; }
-        }
+        .falling-element { position: fixed; top: -50px; pointer-events: none; z-index: 999; animation: fall linear infinite; }
+        @keyframes fall { 0% { top: -50px; transform: translateX(0) rotate(0deg); opacity: 1; } 100% { top: 105vh; transform: translateX(50px) rotate(360deg); opacity: 0; } }
     </style>
 </head>
 <body>
-
-    <div id="loader">
-        <div class="spinner"></div>
-        <div class="loader-text">A Special Surprise is Waiting for You...</div>
-    </div>
-
+    <div id="loader"><div class="spinner"></div><div class="loader-text">A Special Surprise is Waiting for You...</div></div>
     <div id="main-content">
         <h1 class="header-title">Happy Birthday Jesmin 🎂</h1>
-        
-        <div class="photo-container">
-            <!-- এখানে তোমার ছবির নামটা দেবে (যেমন: photo.jpg) -->
-            <img src="photo.jpg" alt="Jesmin & Jawra">
-        </div>
-
+        <div class="photo-container"><img src="photo.jpg" alt="Jesmin & Jawra"></div>
         <div class="card-message">
-            <p class="wish-text">
-                Happy Birthday to the most beautiful and amazing girl I know! 🌸 Thank you for being the sister I got to choose. May your day be as bright and wonderful as your smile. Stay blessed, bestie! 👭💕
-            </p>
+            <p class="wish-text">Happy Birthday to the most beautiful and amazing girl I know! 🌸 Thank you for being the sister I got to choose. May your day be as bright and wonderful as your smile. Stay blessed, bestie! 👭💕</p>
             <p class="from-text">❤️ From Jawra</p>
         </div>
     </div>
-
     <script>
-        // ৩ সেকেন্ড পর লোডিং স্ক্রিন হাইড হবে এবং মেইন পেজ আসবে
         window.onload = function() {
             setTimeout(() => {
                 document.getElementById('loader').style.display = 'none';
                 const mainContent = document.getElementById('main-content');
                 mainContent.style.display = 'block';
-                
-                // অ্যানিমেশন শুরু
                 startFalling();
             }, 3000);
         };
-
         function startFalling() {
             const elements = ['💖', '🌹', '✨', '🌸', '🎈'];
             setInterval(() => {
-                const el = document.createElement('div');
-                el.classList.add('falling-element');
+                const el = document.createElement('div'); el.classList.add('falling-element');
                 el.innerText = elements[Math.floor(Math.random() * elements.length)];
-                el.style.left = Math.random() * 100 + 'vw';
-                el.style.fontSize = Math.random() * (25 - 15) + 15 + 'px';
-                el.style.animationDuration = Math.random() * (5 - 3) + 3 + 's';
-                document.body.appendChild(el);
-                
+                el.style.left = Math.random() * 100 + 'vw'; el.style.fontSize = Math.random() * (25 - 15) + 15 + 'px';
+                el.style.animationDuration = Math.random() * (5 - 3) + 3 + 's'; document.body.appendChild(el);
                 setTimeout(() => { el.remove(); }, 5000);
             }, 400);
         }
